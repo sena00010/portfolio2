@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-const inter = Inter({ subsets: ["latin"] });
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,6 +21,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwU76Wlwc-55i5XGm9cA6b1DwPgljkjOQ",
+    authDomain: "my-portfolio-29f09.firebaseapp.com",
+    projectId: "my-portfolio-29f09",
+    storageBucket: "my-portfolio-29f09.appspot.com",
+    messagingSenderId: "183966692903",
+    appId: "1:183966692903:web:e4a44b7f010db15480c002",
+    measurementId: "G-NYPW5J58YY"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const inter = Inter({ subsets: ["latin"] });
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
