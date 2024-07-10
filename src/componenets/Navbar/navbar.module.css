@@ -1,0 +1,60 @@
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff007f;
+    margin-right: 0.5rem;
+  }
+  
+  .username {
+    font-size: 1rem;
+    color: #ff007f;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navLinks li {
+    font-size: 1rem;
+  }
+  
+  .navLinks a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .navLinks a:hover {
+    color: #ff007f;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .socialIcons a {
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  .socialIcons a:hover {
+    color: #ff007f;
+  }
+  

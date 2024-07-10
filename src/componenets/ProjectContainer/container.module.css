@@ -1,0 +1,7 @@
+.projectTitle {
+    display: flex;
+    align-items: center;
+    gap:20px;
+    flex-direction: column;
+    justify-content: center;
+  }
