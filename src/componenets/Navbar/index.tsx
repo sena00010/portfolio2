@@ -18,16 +18,16 @@ const Navbar = () => {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link href="/">About</Link>
         </li>
         <li>
-          <Link href="/techstack">Tech Stack</Link>
+          <Link href="/">Tech Stack</Link>
         </li>
         <li>
-          <Link href="/projects">Projects</Link>
+          <Link href="/">Projects</Link>
         </li>
         <li>
-          <Link href="/contact">Contact</Link>
+          <Link href="/">Contact</Link>
         </li>
       </ul>
       <div className={styles.socialIcons}>
