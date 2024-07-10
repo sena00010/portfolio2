@@ -1,15 +1,10 @@
+"use client"
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
+import { getAnalytics, isSupported } from "firebase/analytics";
+import { useEffect } from "react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,13 +25,21 @@ export default function RootLayout({
     appId: "1:183966692903:web:e4a44b7f010db15480c002",
     measurementId: "G-NYPW5J58YY"
   };
-  
-  // Initialize Firebase
+
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+
+  useEffect(() => {
+    const setupAnalytics = async () => {
+      if (typeof window !== "undefined" && await isSupported()) {
+        const analytics = getAnalytics(app);
+      }
+    };
+    setupAnalytics();
+  }, []);
+
   return (
     <html lang="en">
-      <body >{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
