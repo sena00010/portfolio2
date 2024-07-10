@@ -34,10 +34,9 @@ export default function RootLayout({
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-  const inter = Inter({ subsets: ["latin"] });
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body >{children}</body>
     </html>
   );
 }
